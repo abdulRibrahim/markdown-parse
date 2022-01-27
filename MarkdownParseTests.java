@@ -7,4 +7,10 @@ public class MarkdownParseTests {
         assertEquals(1, 1 + 0);
     }
 
+    @Test   
+    public void inBetween() {
+        MarkdownParse.
+
+    }
+
 }
