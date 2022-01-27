@@ -38,4 +38,11 @@ public class MarkdownParse {
         ArrayList<String> links = getLinks(contents);
         System.out.println(links);
     }
+
+    public static String converter(String filename) throws IOException {
+        Path fileName = Path.of(filename);
+        String contents = Files.readString(fileName);
+
+        return contents;
+    }
 }
