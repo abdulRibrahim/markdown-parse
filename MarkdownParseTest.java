@@ -56,6 +56,14 @@ public class MarkdownParseTest {
         String snip1Test = MarkdownParse.converter("snippet1.md");
         assertEquals(snip1, MarkdownParse.getLinks(snip1Test));
     }
+    @Test
+    public void testSnippet2() throws IOException {
+        ArrayList<String> snip2 = new ArrayList<>();
+        snip2.add("a.com");
+        snip2.add("a.com((");       
+        String snip2Test = MarkdownParse.converter("snippet2.md");
+        assertEquals(snip2, MarkdownParse.getLinks(snip2Test));
+    }
 
     // @Test
     // public void testInfiniteLoop() throws IOException {
