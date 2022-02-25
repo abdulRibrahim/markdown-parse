@@ -53,8 +53,8 @@ public class MarkdownParseTest {
         snip1.add("url.com");
         snip1.add("`google.com");
         snip1.add("google.com");
-        String ImageTest = MarkdownParse.converter("Image.md");
-        assertEquals(snip1, MarkdownParse.getLinks(ImageTest));
+        String snip1Test = MarkdownParse.converter("snippet1.md");
+        assertEquals(snip1, MarkdownParse.getLinks(snip1Test));
     }
 
     // @Test
