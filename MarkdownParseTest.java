@@ -47,6 +47,16 @@ public class MarkdownParseTest {
         assertEquals(Image, MarkdownParse.getLinks(ImageTest));
     }
 
+    @Test
+    public void testSnippet1() throws IOException {
+        ArrayList<String> snip1 = new ArrayList<>();
+        snip1.add("url.com");
+        snip1.add("`google.com");
+        snip1.add("google.com");
+        String ImageTest = MarkdownParse.converter("Image.md");
+        assertEquals(snip1, MarkdownParse.getLinks(ImageTest));
+    }
+
     // @Test
     // public void testInfiniteLoop() throws IOException {
     //     ArrayList<String> Infin
